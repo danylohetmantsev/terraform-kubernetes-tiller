@@ -6,7 +6,7 @@ resource "kubernetes_deployment" "tiller" {
   }
 
   spec {
-    replicas = 1
+    replicas = "${var.tiller_replicas}"
 
     selector {
       match_labels = "${local.labels}"

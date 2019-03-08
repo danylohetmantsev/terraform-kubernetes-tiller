@@ -32,3 +32,8 @@ variable "tiller_history_max" {
   description = "The maximum number of revisions saved per release. Use 0 for no limit."
   default     = "0"
 }
+
+variable "tiller_replicas" {
+  description = "Amount of tiller instances to run on the cluster."
+  default     = "1"
+}
