@@ -29,9 +29,6 @@ variable "tiller_service_type" {
 }
 
 variable "tiller_history_max" {
-  default = "0"
-}
-
-variable "tiller_image_pull_policy" {
-  default = "IfNotPresent"
+  description = "The maximum number of revisions saved per release. Use 0 for no limit."
+  default     = "0"
 }

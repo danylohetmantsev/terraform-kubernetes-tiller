@@ -13,7 +13,8 @@ provider "kubernetes" {
 }
 
 module "tiller"{
-    source           = "github.com/Vidimensional/terraform-helm-tiller"
+    source           = "Vidimensional/tiller/kubernetes"
+    version          = "0.0.1"
     tiller_name      = "tiller-mynamespace"
     tiller_namespace = "mynamespace"
 }
