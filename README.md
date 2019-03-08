@@ -33,6 +33,7 @@ The following arguments are supported:
 * **tiller_history_max**: (optional) The maximum number of revisions saved per release. Use 0 for no limit. (default: 0)
 
 * **tiller_replicas**: Amount of tiller instances to run on the cluster. (default: 1)
+* **tiller_service_account**: Define it if you want to use an already existing ServiceAccount. If you leave it undefined the module will create a ServieAccount for Tiller.
 
 ## TO-DO
 

@@ -1,4 +1,6 @@
 resource "kubernetes_role" "tiller" {
+  count = "${ var.tiller_service_account == "" ? "1" : "0" }"
+
   metadata {
     name      = "${var.tiller_name}"
     namespace = "${var.tiller_namespace}"
@@ -13,6 +15,8 @@ resource "kubernetes_role" "tiller" {
 }
 
 resource "kubernetes_service_account" "tiller" {
+  count = "${ var.tiller_service_account == "" ? "1" : "0" }"
+
   metadata {
     name      = "${var.tiller_name}"
     namespace = "${var.tiller_namespace}"
@@ -21,6 +25,8 @@ resource "kubernetes_service_account" "tiller" {
 }
 
 resource "kubernetes_role_binding" "tiller" {
+  count = "${ var.tiller_service_account == "" ? "1" : "0" }"
+
   metadata {
     name      = "${var.tiller_name}"
     namespace = "${var.tiller_namespace}"

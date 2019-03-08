@@ -37,3 +37,8 @@ variable "tiller_replicas" {
   description = "Amount of tiller instances to run on the cluster."
   default     = "1"
 }
+
+variable "tiller_service_account" {
+  description = "Define it if you want to use an already existing ServiceAccount. If you leave it undefined the module will create a ServieAccount for Tiller."
+  default     = ""
+}
