@@ -28,7 +28,7 @@ The following arguments are supported:
 
 * **tiller_namespace**: (optional) Namespace where to deploy Tiller. (default: kube-system)
 
-* **tiller_version**: (optional) Tiller version. (default: v2.12.3)
+* **tiller_version**: (optional) Tiller version to install. Use `canary` for using the canary image. (default: v2.12.3)
 
 * **tiller_history_max**: (optional) The maximum number of revisions saved per release. Use 0 for no limit. (default: 0)
 

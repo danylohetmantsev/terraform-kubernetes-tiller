@@ -32,7 +32,7 @@ resource "kubernetes_deployment" "tiller" {
         container {
           name              = "${var.tiller_name}"
           image             = "gcr.io/kubernetes-helm/tiller:${var.tiller_version}"
-          image_pull_policy = "IfNotPresent"
+          image_pull_policy = "${var.tiller_version == "canary" ? "Always" : "IfNotPresent"}"
 
           env {
             name  = "TILLER_NAMESPACE"
