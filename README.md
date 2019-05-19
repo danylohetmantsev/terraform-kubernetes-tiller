@@ -1,5 +1,7 @@
 # terraform-helm-tiller
 
+[![Build Status](https://travis-ci.org/Vidimensional/terraform-kubernetes-tiller.svg?branch=master)](https://travis-ci.org/Vidimensional/terraform-kubernetes-tiller)
+
 Terraform module for deploying Helm's Tiller on you k8s cluster.
 
 ## WORK IN PROGRESS

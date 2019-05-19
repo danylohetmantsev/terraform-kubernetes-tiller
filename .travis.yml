@@ -1,0 +1,17 @@
+# Based on: https://github.com/LiliC/travis-minikube
+sudo: required
+dist: xenial
+env:
+  global:
+    - CHANGE_MINIKUBE_NONE_USER=true
+    - MINIKUBE_WANTUPDATENOTIFICATION=false
+    - MINIKUBE_WANTREPORTERRORPROMPT=false
+    - MINIKUBE_HOME=$HOME
+    - CHANGE_MINIKUBE_NONE_USER=true
+    - KUBECONFIG=$HOME/.kube/config
+
+before_script:
+- tests/scripts/install-test-dependencies.sh
+script:
+- cd tests
+- go test
