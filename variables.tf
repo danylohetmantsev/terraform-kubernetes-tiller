@@ -20,7 +20,7 @@ variable "tiller_namespace" {
 
 variable "tiller_version" {
   description = "Tiller version to install. Use `canary` for using the canary image."
-  default     = "v2.12.3"
+  default     = "v2.15.1"
 }
 
 variable "tiller_service_type" {
